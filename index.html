@@ -29,7 +29,7 @@ var map = L.mapbox.map('map', 'mapbox.streets');
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
     .loadURL('http://dasjo.github.io/dcvie-2015-map/dcvie-2015.geojson')
-    .addTo(map).on('ready', function(e) {
+    .on('ready', function(e) {
     // The clusterGroup gets each marker in the group added to it
     // once loaded, and then is added to the map
     var clusterGroup = new L.MarkerClusterGroup();
