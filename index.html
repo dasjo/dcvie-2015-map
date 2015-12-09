@@ -24,7 +24,7 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 // So the CSV file must be on the same domain as the Javascript, or the server
 // delivering it should support CORS.
 var featureLayer = L.mapbox.featureLayer()
-    .loadURL('/dcvie-2015-map/dcvie-2015.geojson')
+    .loadURL('http://dasjo.github.io/dcvie-2015-map/dcvie-2015.geojson')
     .addTo(map);
 </script>
 </body>
