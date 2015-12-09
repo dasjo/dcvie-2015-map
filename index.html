@@ -34,7 +34,7 @@ var featureLayer = L.mapbox.featureLayer()
     // once loaded, and then is added to the map
     var clusterGroup = new L.MarkerClusterGroup();
     e.target.eachLayer(function(layer) {
-        var content = '<a href="' + layer.feature.properties.link + '<">' + layer.feature.properties."Display name" + '</a>';
+        var content = '<a href="' + layer.feature.properties.link + '<">' + layer.feature.properties["Display name"] + '</a>';
         layer.bindPopup(content);
         clusterGroup.addLayer(layer);
     });
