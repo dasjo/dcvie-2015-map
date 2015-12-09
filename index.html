@@ -34,16 +34,11 @@ var featureLayer = L.mapbox.featureLayer()
     // once loaded, and then is added to the map
     var clusterGroup = new L.MarkerClusterGroup();
     e.target.eachLayer(function(layer) {
+        var content = '<a href="' + layer.feature.properties.link + '<">Link</a>';
+        layer.bindPopup(content);
         clusterGroup.addLayer(layer);
     });
     map.addLayer(clusterGroup);
-});
-
-featureLayer.eachLayer(function(layer) {
-    // here you call `bindPopup` with a string of HTML you create - the feature
-    // properties declared above are available under `layer.feature.properties`
-    var content = '<a href="' + layer.feature.properties.link + '<">Link</a>';
-    layer.bindPopup(content);
 });
 </script>
 
