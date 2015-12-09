@@ -39,6 +39,7 @@ var featureLayer = L.mapbox.featureLayer()
         clusterGroup.addLayer(layer);
     });
     map.addLayer(clusterGroup);
+    map.fitBounds(clusterGroup.getBounds());
 });
 </script>
 
